@@ -1,1 +1,1 @@
-from .lexicon_ru import LEXICON
+from .lexicon_ru import LEXICON, LEXICON_COMMANDS

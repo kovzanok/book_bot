@@ -38,3 +38,5 @@ def prepare_book(path: str) -> None:
             start += page_size
             book[page] = book_page.lstrip()
             page += 1
+
+prepare_book(BOOK_PATH)

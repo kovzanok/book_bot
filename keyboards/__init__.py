@@ -1,1 +1,3 @@
 from .set_main_menu import set_main_menu
+from .pagination_keyboard import build_pagination_kb
+from .bookmarks_keyboard import build_bookmarks_keyboard, build_edit_bookmarks_kb

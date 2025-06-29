@@ -1,10 +1,31 @@
 LEXICON: dict[str, str] = {
-    '/start': 'start command',
-    '/help': 'help command',
-    "start": 'start',
-    "help": 'help',
-    "beginning": 'beginning',
-    "continue": 'continue',
-    "bookmarks": 'bookmarks',
-    "other_answer": 'other_answer'
+    'forward': '>>',
+    'backward': '<<',
+    '/start': '<b>Привет, читатель!</b>\n\nЭто бот, в котором '
+              'ты можешь прочитать книгу (какая-то рандомная)\n\nЧтобы посмотреть список доступных '
+              'команд - набери /help',
+    '/help': '<b>Это бот-читалка</b>\n\nДоступные команды:\n\n/beginning - '
+             'перейти в начало книги\n/continue - продолжить '
+             'чтение\n/bookmarks - посмотреть список закладок\n/help - '
+             'справка по работе бота\n\nЧтобы сохранить закладку - '
+             'нажмите на кнопку с номером страницы\n\n<b>Приятного чтения!</b>',
+    '/bookmarks': '<b>Это список ваших закладок:</b>',
+    'edit_bookmarks': '<b>Редактировать закладки</b>',
+    'edit_bookmarks_button': '❌ РЕДАКТИРОВАТЬ',
+    'del': '❌',
+    'cancel': 'ОТМЕНИТЬ',
+    'no_bookmarks': 'У вас пока нет ни одной закладки.\n\nЧтобы '
+                    'добавить страницу в закладки - во время чтения '
+                    'книги нажмите на кнопку с номером этой '
+                    'страницы\n\n/continue - продолжить чтение',
+    'cancel_text': '/continue - продолжить чтение',
+    'other_answer':'other_answer',
+    'bookmark_added': 'Страница добавлена в закладки!'
+}
+
+LEXICON_COMMANDS: dict[str, str] = {
+    '/beginning': 'В начало книги',
+    '/continue': 'Продолжить чтение',
+    '/bookmarks': 'Мои закладки',
+    '/help': 'Справка по работе бота'
 }

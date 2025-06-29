@@ -1,11 +1,12 @@
 from aiogram import Bot, Dispatcher
 from aiogram.enums.parse_mode import ParseMode
+from aiogram.client.default import DefaultBotProperties
 import asyncio
 import logging
 
 from config import load_config
 from keyboards import set_main_menu
-from handlers import other_handlers
+from handlers import other_handlers, user_handlers
 
 logger = logging.getLogger(__name__)
 
@@ -18,10 +19,12 @@ async def main():
 
     logger.info('Start bot')
 
-    bot = Bot(token=config.bot.token, parse_mode=ParseMode.HTML)
+    bot = Bot(token=config.bot.token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     dp = Dispatcher()
 
+    dp.include_router(user_handlers.router)
     dp.include_router(other_handlers.router)
+    
 
     await set_main_menu(bot)
 
